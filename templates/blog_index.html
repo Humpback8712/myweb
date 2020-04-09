@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+
+
+
+<html>
+	<head>
+		<title>博客</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../static/css/main02.css" />
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="{% url 'app:index' %}" class="logo"><strong>BlogPages</strong> by 雨豪</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'app:index' %}">首页</a></li>
+					<li><a href="#">涂鸦（正在开发）</a></li>
+					<li><a href="#">相册（正在开发）</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>我的博客<br />
+					My Blog</h1>
+					<ul class="actions">
+						<li><a href="#one" class="button alt scrolly big">Continue</a></li>
+					</ul>
+				</div>
+			</section>
+
+            {#		文本#}
+			<article id="one" class="post style1">
+				<div class="image">
+					<img src="../static/images/pic01.jpg" alt="" data-position="75% center" />
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a href="#">Python</a></h2>
+                            <p>这里是摘要</p>
+							<p class="info">时间 <a href="#"></a></p>
+						</header>
+						<ul class="actions">
+							<li><a href="#" class="button alt">Read More</a></li>
+						</ul>
+					</div>
+					<div class="postnav">
+
+						<a href="#four" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+					</div>
+				</div>
+			</article>
+			<article id="four" class="post invert style2 alt">
+				<div class="image">
+					<img src="../static/images/pic01.jpg" alt="" data-position="60% center" />
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a href="generic.html">前端</a></h2>
+							<p class="info">这是时间</p>
+						</header>
+                        <p>这是内容</p><ul class="actions">
+							<li><a href="#" class="button alt">Read More</a></li>
+						</ul>
+					</div>
+					<div class="postnav">
+						<a href="#one" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+
+					</div>
+				</div>
+			</article>
+
+			<article id="five" class="post style3">
+				<div class="image">
+					<img src="../static/images/pic01.jpg" alt="" data-position="5% center" />
+				</div>
+				<div class="content">
+					<div class="inner">
+						<header>
+							<h2><a href="#">GIT</a></h2>
+							<p class="info"> <a href="#"></a></p>
+						</header>
+                        <p>介绍</p>
+						<ul class="actions">
+							<li><a href="#" class="button alt">Read More</a></li>
+						</ul>
+					</div>
+					<div class="postnav">
+						<a href="#four" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+						<a href="#six" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+					</div>
+				</div>
+			</article>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://github.com/hyh1207" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon fa-wechat"><span class="label">微信</span></a></li>
+					<li><a href="#" class="icon fa-qq"><span class="label">qq</span></a></li>
+				</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/static/js/jquery.min.blog.js"></script>
+			<script src="/static/js/jquery.scrolly.min.blog.js"></script>
+			<script src="/static/js/skel.min.blog.js"></script>
+			<script src="/static/js/util.blog.js"></script>
+			<script src="/static/js/main.blog.js"></script>
+
+
+	</body>
+</html>
