@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>BLOG_LIST</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../static/css/main02.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+
+            <header id="header">
+				<a href="{% url 'app:index' %}" class="logo"><strong>BlogPages</strong> by 雨豪</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'app:index' %}">首页</a></li>
+					<li><a href="#">涂鸦（正在开发）</a></li>
+					<li><a href="#">相册（正在开发）</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+					<div class="image fit">
+						<img src="../static/images01/mDPdSjyfu8E.jpg" alt="" />
+					</div>
+					{% for blog in blogs %}
+                    <ul>
+                        <li><a href="blog_content/{{ blog.id }}">{{ blog.blog_title }}</a>----{{ blog.blog_summary }}---{{ blog.add_date }}</li>
+                    </ul>
+                    {% endfor %}
+					</div>
+
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+				    <li><a href="https://github.com/hyh1207" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon fa-wechat"><span class="label">微信</span></a></li>
+					<li><a href="#" class="icon fa-qq"><span class="label">qq</span></a></li>
+				</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+
+            <script src="/static/js/jquery.min.blog.js"></script>
+			<script src="/static/js/jquery.scrolly.min.blog.js"></script>
+			<script src="/static/js/skel.min.blog.js"></script>
+			<script src="/static/js/util.blog.js"></script>
+			<script src="/static/js/main.blog.js"></script>
+
+	</body>
+</html>
