@@ -6,6 +6,38 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/static/css/main02.css" />
+        <link href="https://cdn.bootcss.com/highlight.js/9.15.8/styles/github.min.css" rel="stylesheet">
+        <style>
+    .codehilite {
+      padding: 0;
+    }
+
+    /* for block of numbers */
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      text-align: center;
+      color: #ccc;
+      border-right: 1px solid #CCC;
+      vertical-align: top;
+      padding-right: 5px;
+    }
+
+    .hljs-ln-n {
+      width: 30px;
+    }
+
+    /* for block of code */
+    .hljs-ln .hljs-ln-code {
+      padding-left: 10px;
+      white-space: pre;
+    }
+  </style>
 	</head>
 	<body>
 
@@ -34,7 +66,7 @@
 					</div>
                     <h1>{{ blog.blog_title }}</h1>
                     <h2>{{ blog.blog_summary }}</h2>
-                    <p>{{ blog.blog_content }}</p>
+                    <p>{{ blog.blog_content|safe }}</p>
                     <p>Migrations
 
 Django中对Model进行修改是件麻烦的事情，syncdb命令仅仅创建数据库里还没有的表，它并不对已存在的数据表进行同步修改,也不处理数据模型的删除。 如果你新增或修改数据模型里的字段,或是删除了一个数据模型，你需要手动在数据库里进行相应的修改或者使用South。Django 1.7中已经集成了South的代码，提供了3个新命令：
@@ -176,6 +208,12 @@ class Migration(migrations.Migration):
 			<script src="/static/js/skel.min.blog.js"></script>
 			<script src="/static/js/util.blog.js"></script>
 			<script src="/static/js/main.blog.js"></script>
+            <script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+  <script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+  </script>
 
 	</body>
 </html>

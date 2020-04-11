@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from app.models import BlogInfo
+import markdown
 # Create your views here.
 
 
@@ -23,6 +24,11 @@ def blog_list(request, catalogue):
 def blog_content(request, num):
 
     blog = BlogInfo.objects.get(id=num)
+    blog.blog_content = markdown.markdown(blog.blog_content, extensions=[
+                                      'markdown.extensions.extra',
+                                      'markdown.extensions.codehilite',
+                                      'markdown.extensions.toc',
+                                  ])
 
     return render(request, 'blog_content.html', {'blog': blog})
 
