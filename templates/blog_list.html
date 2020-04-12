@@ -31,14 +31,16 @@
 			<section id="main">
 				<div class="inner">
 					<div class="image fit">
-						<img src="../static/images01/mDPdSjyfu8E.jpg" alt="" />
+                        {% for blog in blogs %}
+                        <ul>
+                            <li><a href="blog_content/{{ blog.id }}">{{ blog.blog_title }}</a>----{{ blog.blog_summary }}---{{ blog.add_date }}</li>
+                        </ul>
+                        {% endfor %}
+						<img src="../static/images01/-kT_jqkMmFc.jpg" alt="" />
 					</div>
-					{% for blog in blogs %}
-                    <ul>
-                        <li><a href="blog_content/{{ blog.id }}">{{ blog.blog_title }}</a>----{{ blog.blog_summary }}---{{ blog.add_date }}</li>
-                    </ul>
-                    {% endfor %}
-					</div>
+                </div>
+
+
 
 			</section>
 
